@@ -9,6 +9,7 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -28,16 +29,15 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="First Name" />
 
                 <EditText
-                    android:id="@+id/editText1"
+                    android:id="@+id/edtFirst"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
 
                     <requestFocus />
                 </EditText>
-
             </TableRow>
 
             <TableRow
@@ -49,34 +49,49 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Family Name" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/edtFamily"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
             </TableRow>
         </TableLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnOK"
+                android:layout_width="78dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="OK" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                android:layout_width="93dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
-
+                android:text="Cancel" />
         </LinearLayout>
-
     </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="41dp" >
+
+        <TextView
+            android:id="@+id/txvMsg"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left"
+            android:text="Large Text" />
+
+    </GridLayout>
 
 </RelativeLayout>
